@@ -2,8 +2,8 @@
 
 // Connecting to the database
 
-$username = "root";
 $servername = "localhost";
+$username = "root";
 $password = "";
 $database = "bank";
 
