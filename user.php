@@ -4,15 +4,41 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <title>View Profile</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif
+    }
+
+    .w3-bar,
+    h1,
+    button {
+      font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor,
+    .fa-coffee {
+      font-size: 200px
+    }
+  </style>
 </head>
 
-<body style="background-color: #00BFFF;">
+<body style="background-color: #FEF9A7;">
   <?php include 'partials/_dbconnect.php' ?>
   <?php include 'partials/_navbar.php'; ?>
 
@@ -30,7 +56,7 @@
   if ($num > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
       echo '
-            <div class="container mt-4">
+            <div class="container mt-4" style="padding: 50px;">
             <div style="justify-content: center;" class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-4">
@@ -47,23 +73,25 @@
                   <hr>';
 
 
-
-      echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      if ($row['current_balance'] < 10000) {
+        echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Transfer Money
                   </button>
                   <hr>
                   <div class="alert alert-warning" role="alert">
-                    Your current balance should be more than ₹10000
+                    Your current balance should be more than ₹10000 to avoid penalties.
                   </div>
                 </div>
               </div>
             </div>
        </div>
           </div>';
+      }
     }
   }
   include 'partials/_transferModal.php';
   ?>
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

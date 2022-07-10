@@ -1,29 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img style="width: 35px;" src="images/bank_logo.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="transactions.php">Transactions History</a>
-                </li>
-            </ul>
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+        <a href="transactions.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Transaction History</a>
+        <a href="customer.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">View All Customers</a>
 
-            <?php
-            $individual = $_GET['view'];
-            if (!$individual) {
-                echo '
-            <form class="d-flex" action="search.php" method="GET">
-                <input class="form-control me-2" name="search" type="search" placeholder="Search name or email" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>';
-            }
-            ?>
-        </div>
     </div>
-</nav>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+    </div>
+</div>
