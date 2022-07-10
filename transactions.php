@@ -23,6 +23,7 @@
                 <th scope="col">Sender's Name</th>
                 <th scope="col">Reciever's Name</th>
                 <th scope="col">Amount</th>
+                <th scope="col">Message</th>
                 <th scope="col">Date</th>
             </tr>
         </thead>
@@ -50,6 +51,7 @@
                 <td>' . $row2['customer_name'] . '</td>
                 <td>' . $row3['customer_name'] . '</td>
                 <td>' . $row['transfer_amount'] . '</td>
+                <td>' . $row['transfer_message'] . '</td>
                 <td>' . $row['datetime'] . '</td>
             </tr>
         </tbody>';

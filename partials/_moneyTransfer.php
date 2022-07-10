@@ -33,6 +33,7 @@
         $email = $_POST['email'];
         $contact = $_POST['contact'];
         $amount = (float)$_POST['amount'];
+        $note = $_POST['note'];
         $code = (int)$_POST['code'];
         $verCode = $_SESSION['verCode'];
 
@@ -119,7 +120,7 @@
                 }
 
 
-                $sql4 = "INSERT INTO `transfers` (`transfer_from`, `transfer_to`, `transfer_amount`, `datetime`) VALUES ('$sender_id', '$reciever_id', '$amount', current_timestamp());";
+                $sql4 = "INSERT INTO `transfers` (`transfer_from`, `transfer_to`, `transfer_amount`, `datetime`, `transfer_message`) VALUES ('$sender_id', '$reciever_id', '$amount', current_timestamp(), '$note');";
                 $result4 = mysqli_query($conn, $sql4);
             } else {
                 echo '<div class="container mt-3">

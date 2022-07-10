@@ -20,6 +20,10 @@
                         <label for="amount" class="form-label">Amount</label>
                         <input type="text" class="form-control" id="amount" name="amount" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="note" class="form-label">Add a Note</label>
+                        <input type="text" class="form-control" id="note" name="note" required>
+                    </div>
                     <?php
                     $_SESSION['verCode'] = rand(100000, 999999);
                     echo '<h1>' . $_SESSION['verCode'] . '</h1>';

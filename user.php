@@ -46,9 +46,9 @@
                   <p class="card-text">' . $row['customer_name'] . '\'s Balance - <b>₹' . $row['current_balance'] . '</b></p>
                   <hr>';
 
-      if ($row['current_balance'] <= 10000) {
 
-        echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+
+      echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Transfer Money
                   </button>
                   <hr>
@@ -60,7 +60,6 @@
             </div>
        </div>
           </div>';
-      }
     }
   }
   include 'partials/_transferModal.php';
