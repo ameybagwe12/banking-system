@@ -37,7 +37,7 @@
     <?php include 'partials/_dbconnect.php' ?>
     <?php include 'partials/_navbar.php' ?>
 
-    <table class="table">
+    <table class="table table-dark table-striped" style="padding: 70px;">
         <thead>
             <tr>
                 <th scope="col">No.</th>
