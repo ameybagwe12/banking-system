@@ -28,7 +28,7 @@
     </header>
 
     <div class="text-center">
-        <img src="https://source.unsplash.com/500x400/?payment,online" class="rounded" alt="..." width="900px">
+        <img src="https://source.unsplash.com/500x400/?payment,moneytransfer" class="rounded" alt="..." width="900px">
     </div>
 
     <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
