@@ -24,9 +24,9 @@ echo '<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria
                     <div class="mb-3">
                         <label for="note" class="form-label">Add a Note</label>
                         <input type="text" class="form-control" id="note" name="note" required>
-                    </div>
-                    <?php
-                    $_SESSION["verCode"] = rand(100000, 999999)';
+                    </div>'; ?>
+<?php
+$_SESSION["verCode"] = rand(100000, 999999);
 echo '<h1>' . $_SESSION["verCode"] . '</h1>
 
 <div class="mb-3">
@@ -44,4 +44,3 @@ echo '<h1>' . $_SESSION["verCode"] . '</h1>
 </div>
 </div>
 </div>';
-?>
