@@ -18,36 +18,38 @@
     <?php include 'partials/_dbconnect.php' ?>
     <?php include 'partials/_navbar.php' ?>
 
-    <table class="table table-dark table-striped" style="margin-top: 50px;">
-        <thead>
-            <tr>
-                <th scope=" col">No.</th>
-                <th scope="col">Sender's Name</th>
-                <th scope="col">Reciever's Name</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Message</th>
-                <th scope="col">Date</th>
-            </tr>
-        </thead>
+    <div class="container" style="padding: 70px;">
+        <h2 class="text-center my-3">Browse Recent Transactions</h2>
+        <table class="table table-dark table-striped" style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th scope=" col">No.</th>
+                    <th scope="col">Sender's Name</th>
+                    <th scope="col">Reciever's Name</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
 
-        <?php
-        $sql = "SELECT * FROM `transfers`";
-        $result = mysqli_query($conn, $sql);
+            <?php
+            $sql = "SELECT * FROM `transfers` ORDER BY `transfer_id` DESC LIMIT 10";
+            $result = mysqli_query($conn, $sql);
 
-        while ($row = mysqli_fetch_assoc($result)) {
+            while ($row = mysqli_fetch_assoc($result)) {
 
-            $transfer_from = $row['transfer_from'];
-            $transfer_to = $row['transfer_to'];
+                $transfer_from = $row['transfer_from'];
+                $transfer_to = $row['transfer_to'];
 
-            $sql2 = "SELECT `customer_name` FROM `customer` WHERE `customer_id`='$transfer_from';";
-            $result2 = mysqli_query($conn, $sql2);
-            $row2 = mysqli_fetch_assoc($result2);
+                $sql2 = "SELECT `customer_name` FROM `customer` WHERE `customer_id`='$transfer_from';";
+                $result2 = mysqli_query($conn, $sql2);
+                $row2 = mysqli_fetch_assoc($result2);
 
-            $sql3 = "SELECT `customer_name` FROM `customer` WHERE `customer_id`='$transfer_to';";
-            $result3 = mysqli_query($conn, $sql3);
-            $row3 = mysqli_fetch_assoc($result3);
+                $sql3 = "SELECT `customer_name` FROM `customer` WHERE `customer_id`='$transfer_to';";
+                $result3 = mysqli_query($conn, $sql3);
+                $row3 = mysqli_fetch_assoc($result3);
 
-            echo '<tbody>
+                echo '<tbody>
             <tr>
                 <td>' . $row['transfer_id'] . '</td>
                 <td>' . $row2['customer_name'] . '</td>
@@ -57,12 +59,13 @@
                 <td>' . $row['datetime'] . '</td>
             </tr>
         </tbody>';
-        }
+            }
 
-        ?>
-    </table>
+            ?>
+        </table>
+    </div>
 
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity fixed-bottom">
+    <footer class="w3-container w3-padding-32 w3-center w3-opacity fixed-bottom">
         <div class="w3-xlarge w3-padding-32">
             <i class="fa fa-facebook-official w3-hover-opacity"></i>
             <i class="fa fa-instagram w3-hover-opacity"></i>
