@@ -52,7 +52,7 @@
                 <td>' . $row['transfer_id'] . '</td>
                 <td>' . $row2['customer_name'] . '</td>
                 <td>' . $row3['customer_name'] . '</td>
-                <td>' . $row['transfer_amount'] . '</td>
+                <td>₹' . $row['transfer_amount'] . '</td>
                 <td>' . $row['transfer_message'] . '</td>
                 <td>' . $row['datetime'] . '</td>
             </tr>
@@ -62,9 +62,17 @@
         ?>
     </table>
 
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity fixed-bottom">
+        <div class="w3-xlarge w3-padding-32">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Copyright Banking System | All rights reserved</a></p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <?php include 'partials/_footer.php' ?>
 </body>
 
 </html>
