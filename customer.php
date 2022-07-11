@@ -21,6 +21,40 @@
     <?php include 'partials/_dbconnect.php' ?>
     <?php include 'partials/_navbar.php'; ?>
 
+    <div class="container my-3">
+        <h2 class="text-center my-3" style="padding: 70px;">Browse All Customers</h2>
+        <div class="row my-3">
+            <!-- Fetch all the categories using a while loop -->
+            <?php
+            $sql =  "SELECT * FROM `customer`";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+                // echo $row['category_id'];
+                // echo $row['category_name'];
+
+                $customer_name = $row['customer_name'];
+                $id = $row['customer_id'];
+                $customer_email = $row['customer_email'];
+                $customer_contact = $row['customer_contact'];
+                echo '<div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/profile.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">' . $customer_name . '</a></h5>
+                        <hr>
+                        <p class="card-text"><b>Email</b> - ' . $customer_email . '...</p>
+                        <p class="card-text"><b>Contact</b> - ' . $customer_contact . '...</p>
+                        <hr>
+                        <a href="user.php?user_id=' . $id . '&view=' . true . '" class="btn btn-primary">View Full Details</a>
+                    </div>
+                </div>
+            </div>';
+            }
+
+            ?>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
