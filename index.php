@@ -36,13 +36,13 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active" data-bs-interval="2000">
                     <img src="images/transfer_logo1.png" class="rounded" alt="..." width="900px">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="2000">
                     <img src="images/transfer_logo2.png" class="rounded" alt="..." width="900px">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="2000">
                     <img src="images/transfer_logo3.png" class="rounded" alt="..." width="900px">
                 </div>
             </div>
