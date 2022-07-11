@@ -13,7 +13,7 @@
     <title>Payment Bill</title>
 </head>
 
-<body>
+<body style="background-color: #FEF9A7;">
 
     <?php
 

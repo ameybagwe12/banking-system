@@ -53,7 +53,7 @@
                   <hr>
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Transfer Money
-                  </button><hr>';
+                  </button>';
 
 
       if ($row['current_balance'] < 10000) {
