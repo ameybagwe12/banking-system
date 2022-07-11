@@ -29,7 +29,7 @@
     </header>
 
     <div class="text-center">
-        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -37,13 +37,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://source.unsplash.com/500x400/?payment,moneytransfer" class="rounded" alt="..." width="900px">
+                    <img src="images/transfer_logo1.png" class="rounded" alt="..." width="900px">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://source.unsplash.com/500x400/?pay,moneytransfer" class="rounded" alt="..." width="900px">
+                    <img src="images/transfer_logo2.png" class="rounded" alt="..." width="900px">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://source.unsplash.com/500x400/?payment,online" class="rounded" alt="..." width="900px">
+                    <img src="images/transfer_logo3.png" class="rounded" alt="..." width="900px">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -54,7 +54,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div> -->
+        </div>
     </div>
 
     <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
