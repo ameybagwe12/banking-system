@@ -2,10 +2,16 @@
 
 // Connecting to the database
 
+// $servername = "sql106.epizy.com";
+// $username = "epiz_32152794";
+// $password = "W4qrZggYGlRraRu";
+// $database = "epiz_32152794_bank";
+
 $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "bank";
+
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
